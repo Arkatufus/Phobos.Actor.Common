@@ -23,10 +23,10 @@ variables:
     value: petabridge/phobos.actor.common #replace this
 
 steps:
-- name: "Install .NET SDK"
-  uses: actions/setup-dotnet@v4.0.0
-  with:
-    global-json-file: "./global.json"
+- task: UseDotNet@2
+  displayName: "Install .NET SDK"
+  packageType: sdk
+  useGlobalJson: true
 
 - task: BatchScript@1
   displayName: 'FAKE Build'
