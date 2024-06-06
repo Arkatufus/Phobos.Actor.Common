@@ -25,8 +25,9 @@ variables:
 steps:
 - task: UseDotNet@2
   displayName: "Install .NET SDK"
-  packageType: sdk
-  useGlobalJson: true
+  inputs:
+    packageType: sdk
+    useGlobalJson: true
 
 - task: BatchScript@1
   displayName: 'FAKE Build'

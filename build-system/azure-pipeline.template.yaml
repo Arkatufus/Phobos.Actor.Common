@@ -19,8 +19,9 @@ jobs:
         persistCredentials: true
       - task: UseDotNet@2
         displayName: "Install .NET SDK"
-        packageType: sdk
-        useGlobalJson: true
+        inputs:
+          packageType: sdk
+          useGlobalJson: true
       # Linux or macOS
       - task: Bash@3 
         displayName: Linux / OSX Build
