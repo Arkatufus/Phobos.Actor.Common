@@ -8,10 +8,10 @@ SCRIPT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 TOOLS_DIR=$SCRIPT_DIR/tools
 SIGNCLIENT_DIR=$TOOLS_DIR/signclient
 NUGET_EXE=$TOOLS_DIR/nuget.exe
-NUGET_URL=https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
-FAKE_VERSION=4.61.2
+NUGET_URL=https://dist.nuget.org/win-x86-commandline/v5.8.0/nuget.exe
+FAKE_VERSION=4.63.0
 FAKE_EXE=$TOOLS_DIR/FAKE/tools/FAKE.exe
-DOCFX_VERSION=2.40.5
+DOCFX_VERSION=2.59.4
 DOCFX_EXE=$TOOLS_DIR/docfx.console/tools/docfx.exe
 
 # Define default arguments.
@@ -92,7 +92,7 @@ fi
 # INSTALL SignTool
 ###########################################################################
 if [ ! -f "$SIGNTOOL_EXE" ]; then
-    "$SCRIPT_DIR/.dotnet/dotnet" tool install SignClient --version 1.0.82 --tool-path "$SIGNCLIENT_DIR"
+    "$SCRIPT_DIR/.dotnet/dotnet" tool install SignClient --version 8.0.206 --tool-path "$SIGNCLIENT_DIR"
     if [ $? -ne 0 ]; then
         echo "SignClient already installed."
     fi
