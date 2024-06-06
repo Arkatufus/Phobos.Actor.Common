@@ -92,7 +92,7 @@ fi
 # INSTALL SignTool
 ###########################################################################
 if [ ! -f "$SIGNTOOL_EXE" ]; then
-    "$SCRIPT_DIR/.dotnet/dotnet" tool install SignClient --version 8.0.206 --tool-path "$SIGNCLIENT_DIR"
+    dotnet tool install SignClient --version 1.3.155 --tool-path "$SIGNCLIENT_DIR"
     if [ $? -ne 0 ]; then
         echo "SignClient already installed."
     fi

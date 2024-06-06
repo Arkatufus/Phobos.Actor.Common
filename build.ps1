@@ -93,7 +93,7 @@ if (Get-Command signclient -ErrorAction SilentlyContinue) {
 else{
     $SignClientFolder = Join-Path $ToolPath "signclient"
     Write-Host "SignClient not found. Installing to ... $SignClientFolder"
-    dotnet tool install SignClient --version 8.0.206 --tool-path "$SignClientFolder"
+    dotnet tool install SignClient --version 1.3.155 --tool-path "$SignClientFolder"
 }
 
 ###########################################################################

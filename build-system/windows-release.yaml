@@ -29,6 +29,12 @@ steps:
     packageType: sdk
     useGlobalJson: true
 
+- task: UseDotNet@2
+  displayName: "Install .NET 5.0 Runtime"
+  inputs:
+    packageType: runtime
+    version: 5.x
+
 - task: BatchScript@1
   displayName: 'FAKE Build'
   inputs:
